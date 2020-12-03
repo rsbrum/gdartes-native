@@ -1,0 +1,8 @@
+{
+  "name": "gdartes-native",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "975deab0"
+}
