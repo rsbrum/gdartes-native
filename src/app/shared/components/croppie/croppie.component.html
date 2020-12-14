@@ -1,0 +1,12 @@
+<div class="container2" [style.display]="show ? 'block' : 'none'">
+  <div class="demo"></div>
+
+  <div class="crop-container">
+      <app-sub-button [text]="'Cortar'" (click)="finish()"></app-sub-button> 
+      
+      <button class="rotate-button" (click)="rotate()">
+          <i class="fas fa-redo-alt"></i>
+      </button>
+
+  </div>
+</div>

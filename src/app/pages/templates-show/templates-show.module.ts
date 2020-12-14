@@ -5,15 +5,19 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { TemplatesShowPageRoutingModule } from './templates-show-routing.module';
+import { ImageCropperModule } from 'ngx-image-cropper';
 
 import { TemplatesShowPage } from './templates-show.page';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    TemplatesShowPageRoutingModule
+    TemplatesShowPageRoutingModule,
+    SharedModule,
+    ImageCropperModule
   ],
   declarations: [TemplatesShowPage]
 })

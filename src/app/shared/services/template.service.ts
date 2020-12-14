@@ -12,6 +12,11 @@ export class TemplateService {
 
   constructor(private requestsService: RequestsService) { }
 
+  putasso()
+  {
+    console.log("funcinoa");
+  }
+  
   async getTemplates(agencySubdomain: String, accessCode: String) : Promise<Template[]> {
     let templates = await this.requestsService.get(`api/${agencySubdomain}/business/${accessCode}/template`).toPromise() as unknown as Template[];
     return templates;

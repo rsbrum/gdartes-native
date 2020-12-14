@@ -1,0 +1,5 @@
+<input *ngIf="!multiline" type="text" [(ngModel)]="value" [placeholder]="text" 
+    (ngModelChange)="onChangeProperty($event)" (keyup.enter)="onEnter.emit()" (focusout)="onEnter.emit()"/>
+    
+<textarea *ngIf="multiline" type="text" [(ngModel)]="value" [placeholder]="text" 
+    (ngModelChange)="onChangeProperty($event)" (keyup.enter)="onEnter.emit()" (focusout)="onEnter.emit()"></textarea>

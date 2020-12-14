@@ -1,0 +1,17 @@
+<div>
+  <div class="input-interface">
+      <label (click)="mainAction($event)">
+          <input #input type="file" (change)="onChange($event)"/>
+          <img #thumbnail src="#" />
+          <div>
+              <span>{{ text }}</span>
+              <b>{{ mainActionDesc }}</b>
+          </div>
+      </label>
+
+      <ion-button *ngIf="isImageLoaded" (click)="clear()" style="margin-top: 20px;">
+        <ion-icon name="ban-outline"></ion-icon>        
+      </ion-button>
+
+  </div>
+</div>

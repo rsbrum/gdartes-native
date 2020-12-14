@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+.container2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 485px;
+}
+
+.image-section {
+    //background: #eeeeee;
+    border-radius: 0 0 25px 25px;
+    height: 470px;
+    padding: 15px 15px 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .thumbnail {
+        overflow: hidden;
+    }
+
+    .preview-text {
+        color: #0a427e;
+        font-size: 12px;
+        padding-top: 10px;
+    }
+
+    .spinner {
+        position: absolute;
+        margin: auto;
+    }
+    /*
+    app-icon-button {
+        position: absolute;
+        top: 98px;
+        left: calc(50% + 76px);
+    }*/
+}
+
+.format-options {
+    display: flex;
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 8px 25px;
+
+    li {
+        flex-grow: 1;
+        list-style: none;
+
+        input {
+            display: none;
+        }
+
+        label {
+            border-radius: 8px;
+            display: block;
+            color: #888;
+            padding: 20px 16px;
+
+            div {
+                border: 3px solid #888;
+                border-radius: 3px;
+                float: left;
+                margin-top: -5px;
+            }
+
+            span {
+                font-size: 15px;
+                font-weight: bold;
+                margin-left: 10px;
+            }
+        }
+
+        input:checked + label {
+            background: #eeeeee;
+            color: black;
+
+            div {
+                border-color: white;
+            }
+        }
+    }
+}
+
+.input-field-container {
+    padding: 9px 25px;
+}
+
+.submit-container {
+    padding: 14px 20px;
+}
+
+#frame {
+  -webkit-appearance: none;
+  box-shadow:0px 8px 15px rgba(0, 0, 0, 0.4);;
+  -moz-box-shadow:0px 8px 15px rgba(0, 0, 0, 0.4);;
+  -webkit-box-shadow:0px 8px 15px rgba(0, 0, 0, 0.4);;    background: white;
+    overflow: hidden;
+    position: absolute;
+}
+
+#canvas {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#big-canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+
+    .preview-text {
+        margin-top: 20px;
+        color: #0a427e;
+    }
+
+    .grow {
+        flex-grow: 1;
+    }
+
+    app-sub-button {
+        z-index: 100;
+        margin-bottom: 20px;
+    }
+}
+
+#big-frame {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}

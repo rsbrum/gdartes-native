@@ -1,0 +1,18 @@
+button {
+    background: #0a427e;
+    border: 3px solid #f0f0f0;
+    border-radius: 60px;
+   /* box-shadow:0 0 20px rgba(0, 0, 0, 0.4);;
+    -moz-box-shadow:0 0 20px rgba(0, 0, 0, 0.4);;
+    -webkit-box-shadow:0 0 20px rgba(0, 0, 0, 0.4);;
+    box-shadow: 0 0 20px #00000022;*/
+    color: white;
+    display: inline;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 9px 23px;
+    margin: auto;
+    display: flex;
+}

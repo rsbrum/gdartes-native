@@ -5,10 +5,12 @@
 
 
 <ion-content>
-  <ion-card [routerLink]="['1234']">
-    <img src="https://app.geradordeartes.com.br/img/656ade98-f86c-402b-ae59-8153ea08355f.jpg" />
-    <ion-card-header>
-      <ion-card-title>Modelo 1</ion-card-title>
-    </ion-card-header>
-  </ion-card>  
+  <div *ngFor="let template of templates">
+    <ion-card style="margin: 25px;" [routerLink]="['/pages/templates/', template.id]">
+      <img src="{{template.thumbnail}}.jpg" />
+      <ion-card-header  style="text-align: center;">
+        <ion-card-title>{{template.name}}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </div>
 </ion-content>

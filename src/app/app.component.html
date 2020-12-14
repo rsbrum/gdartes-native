@@ -2,10 +2,10 @@
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
-        <ion-list id="inbox-list">
-          <ion-list-header>Gerador de Artes</ion-list-header>
-          <ion-note>Matheus Martelo</ion-note>
-
+        <div style="display: flex;">
+          <img style="margin: auto;" src="../assets/img/gerador_de_artes.png" alt="">
+        </div>
+        <ion-list lines="none" id="inbox-list">
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" detail="false" [class.selected]="selectedIndex == i">
               <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>

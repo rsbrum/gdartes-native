@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoadingController } from '@ionic/angular';
+import { Session } from 'src/app/shared/models/Session';
+import { Template } from 'src/app/shared/models/Template';
+import { AuthService } from 'src/app/shared/services/auth.service';
+import { TemplateService } from 'src/app/shared/services/template.service';
 
 @Component({
   selector: 'app-templates',
@@ -7,9 +13,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemplatesPage implements OnInit {
 
-  constructor() { }
+  isLoading = true;
+  templates : Template[];
+  session: Session;
+  loading;
 
-  ngOnInit() {
+  constructor(
+    private templateService: TemplateService, 
+    private authService: AuthService, 
+    private route: Router,
+    public loadingController: LoadingController) { }
+
+  async ngOnInit() {
+    this.loading = await this.loadingController.create({
+      spinner: "lines",
+      duration: 0,
+      message: 'Carregando',
+      translucent: true,
+      backdropDismiss: true
+    });
+    this.getTemplates();
+  }
+
+  async getTemplates() {
+    this.loading.present();
+    this.session = this.authService.getSession();
+    this.templates = await this.templateService.getTemplates(this.session.agencySubdomain, this.session.accessCode);
+    this.loading.dismiss();
   }
 
 }

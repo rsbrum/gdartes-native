@@ -1,9 +1,23 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>account</ion-title>
-  </ion-toolbar>
+  <app-toolbar title="Conta">
+  </app-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <div style="display: flex; margin: 50px;">
+    <img style="margin: auto;" src="../assets/img/gerador_de_artes.png" alt="">
+  </div>
+  <section class="account-data card-data">
+    <h1>{{ session.businessName }}</h1>
+    <p >Código de acesso: <span>{{ session.accessCode }}</span></p>
+  </section>
+  <section class="contact-data card-data">
+      <p class="subtitle">SUPORTE</p>
+      <p class="info"><i class="fas fa-envelope"></i> contato@geradordeartes.com</p>
+      <p class="info"><i class="fab fa-whatsapp" style="font-size: 14px;"></i> (54) 98409-1254</p>
+  </section>
+  <div style="display: flex;">
+    <ion-button (click)="logout()" style="margin: auto; margin-top: 200px;">SAIR</ion-button>
+  </div>
+  
 </ion-content>

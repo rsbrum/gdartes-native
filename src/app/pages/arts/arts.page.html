@@ -1,22 +1,27 @@
 <ion-header>
-  <app-toolbar title="Artes">
+  <app-toolbar color="tertiary" title="Artes">
   </app-toolbar>
 </ion-header>
 
 <ion-content>
 
-  <ion-card [routerLink]="['1234']">
-    <img src="https://app.geradordeartes.com.br/img/656ade98-f86c-402b-ae59-8153ea08355f.jpg" />
-    <ion-card-header>
-      <ion-card-title>Arte 1</ion-card-title>
-    </ion-card-header>
-  </ion-card>  
-
-  <ion-card>
-    <img src="https://i.imgur.com/vTXdp1Q.jpg" />
-    <ion-card-header>
-      <ion-card-title>Arte 2</ion-card-title>
-    </ion-card-header>
-  </ion-card>   
-     
+  <ion-row *ngFor="let art of arts; let i = index;">
+    <ion-col>
+      <ion-card [routerLink]="['/pages/arts/', arts[i].id]">
+        <img src="{{arts[i].url}}.jpg" />
+      </ion-card>      
+    </ion-col>
+    <ion-col >
+      <ion-card *ngIf="arts[i + 1]" [routerLink]="['/pages/arts/', arts[i + 1].id]">
+        <img src="{{arts[i + 1].url}}.jpg" />
+      </ion-card>      
+    </ion-col>
+  </ion-row>
+<!--              
+  <div *ngFor="let art of arts; let i = index">
+    <ion-card [routerLink]="['/pages/arts/', art.id]">
+      <img src="{{art.url}}.jpg" />
+    </ion-card>  
+  </div>
+  -->                
 </ion-content>

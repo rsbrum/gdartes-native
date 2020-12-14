@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'Perfil',
-      url: '/pages/templates',
+      url: 'pages/account',
       icon: 'person'
     }
   ];

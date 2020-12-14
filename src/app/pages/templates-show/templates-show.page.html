@@ -1,12 +1,67 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-back-button text="Voltar"></ion-back-button>
     </ion-buttons>
-    <ion-title>Modelo 1</ion-title>
+    <ion-title>Nome</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+  <div class="container2">
+    <div class="image-section">
+      <div class="thumbnail" id="canvas">
+
+        <div #viewContainerRef id="frame">
+
+        </div>
+      </div>
+      <div class="preview-text">
+        PRÉ-VISUALIZAÇÃO
+
+      </div>
+
+    </div>
+    <app-croppie #croppie></app-croppie>
+
+  </div>
+
+<form class="form-desktop" id="form" *ngIf="template" (submit)='saveArt()'>
+  <div *ngFor="let inputField of template.input.list" [ngClass]="isEditable(inputField) ? 'input-field-container': ''">
+      <app-load-image *ngIf="inputField.type === 'image' && isEditable(inputField)"
+          [text]="inputField.description" [width]="getImageInputSize(inputField).width" [height]="getImageInputSize(inputField).height"
+          [croppie]="croppie" [(value)]="template.state[inputField.id].value" [preset]="template.state[inputField.id].preset"
+          (render)="render()"></app-load-image>
+
+      <app-text-input *ngIf="inputField.type === 'string' && isEditable(inputField)"
+          [text]="inputField.description" [(value)]="template.state[inputField.id].value" (render)="render()"></app-text-input>
+
+      <app-text-input *ngIf="inputField.type === 'text' && isEditable(inputField)"
+          [multiline]="true" [text]="inputField.description" [(value)]="template.state[inputField.id].value" (render)="render()"></app-text-input>
+  </div>
+
+  <div class="submit-container">
+      <ion-button expand="block" (click)="saveArt()"> Gerar Arte</ion-button>
+  </div>
+</form>
+
+
 </ion-content>
+
+<!--
+<input type="file" (change)="fileChangeEvent($event)" />
+
+<image-cropper
+    [imageChangedEvent]="imageChangedEvent"
+    [maintainAspectRatio]="true"
+    [aspectRatio]="4 / 3"
+    format="png"
+    (imageCropped)="imageCropped($event)"
+    (imageLoaded)="imageLoaded()"
+    (cropperReady)="cropperReady()"
+    (loadImageFailed)="loadImageFailed()"
+></image-cropper>
+
+<img [src]="croppedImage" />
+-->

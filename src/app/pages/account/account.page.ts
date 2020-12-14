@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Session } from 'src/app/shared/models/Session';
+import { AuthService } from 'src/app/shared/services/auth.service';
 
 @Component({
   selector: 'app-account',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountPage implements OnInit {
 
-  constructor() { }
+  session: Session
 
-  ngOnInit() {
+  constructor(
+    private authService: AuthService
+    ) { }
+
+  ngOnInit(): void {
+    this.session = this.authService.getSession()
   }
 
+  logout() {
+    this.authService.logout()
+  }
 }

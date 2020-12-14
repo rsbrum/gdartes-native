@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-back-button text="Voltar"></ion-back-button>
     </ion-buttons>
@@ -9,15 +9,15 @@
 
 <ion-content>
   <ion-card>
-    <img src="https://app.geradordeartes.com.br/img/656ade98-f86c-402b-ae59-8153ea08355f.jpg" alt="">
+    <img *ngIf="art" src="{{art.url}}.jpg" alt="">
   </ion-card>
 
     <div style="text-align: center;">
-      <ion-button style="margin: 5px;">
+      <ion-button (click)="deleteArt()" style="margin: 5px;">
         <ion-icon name="trash-outline"></ion-icon>
       </ion-button>
-      <ion-button style="margin: 5px;">
-        <ion-icon name="download-outline"></ion-icon>
+      <ion-button (click)="download()" style="margin: 5px;">
+        <ion-icon  name="download-outline"></ion-icon>
       </ion-button>
     </div>
 </ion-content>

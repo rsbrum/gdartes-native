@@ -39,7 +39,17 @@
                 "input": "src/global.scss"
               }
             ],
-            "scripts": []
+            "scripts": [              
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/croppie/croppie.js",
+              "node_modules/hammerjs/hammer.min.js",
+              "./src/app/gdartes-renderer/csjs/csjs.js",
+              "./src/app/gdartes-renderer/renderer/Util.js",
+              "./src/app/gdartes-renderer/renderer/ImageRenderer.js",
+              "./src/app/gdartes-renderer/renderer/TextRenderer.js",
+              "./src/app/gdartes-renderer/renderer/ColumnRenderer.js",
+              "./src/app/gdartes-renderer/renderer/RowRenderer.js",
+              "./src/app/gdartes-renderer/renderer/MainRenderer.js"]
           },
           "configurations": {
             "production": {

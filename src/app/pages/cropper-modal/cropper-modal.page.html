@@ -1,0 +1,39 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content >
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="dismissModal()">
+      <ion-icon name="cut-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <div style="width: 100%; height: 100%; background: black; display: flex;">
+      <image-cropper style="margin:auto; background: black !important; --cropper-outline-color: rgba(0,0,0,0.5)"
+      [imageChangedEvent]="imageChangedEvent"
+      [maintainAspectRatio]="false"
+      [aspectRatio]="4 / 3"
+      format="png"
+      autoCrop="false"
+      (imageCropped)="imageCropped($event)"
+      (imageLoaded)="imageLoaded()"
+      (cropperReady)="cropperReady()"
+      (loadImageFailed)="loadImageFailed()"
+      ></image-cropper>
+  </div>
+   <!--
+  <ima-cropper
+      [imageChangedEvent]="imageChangedEvent"
+      [maintainAspectRatio]="true"
+      [aspectRatio]="4 / 3"
+      format="png"
+      (imageCropped)="imageCropped($event)"
+      (imageLoaded)="imageLoaded()"
+      (cropperReady)="cropperReady()"
+      (loadImageFailed)="loadImageFailed()"
+  ></image-cropper>
+  
+  <img [src]="croppedImage" />
+  <ion-button expand="block" (click)="dismissModal()">CORTAR</ion-button>
+  -->
+</ion-content>
