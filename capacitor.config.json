@@ -1,5 +1,5 @@
 {
-  "appId": "io.ionic.starter",
+  "appId": "gdartes.app",
   "appName": "gdartes-native",
   "bundledWebRuntime": false,
   "npmClient": "npm",
