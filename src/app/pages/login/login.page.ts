@@ -47,7 +47,7 @@ export class LoginPage implements OnInit {
     try {
       let loginResponse = await this.authService.login(accessCode);
       this.loading.dismiss();
-      this.route.navigate(['/pages/arts']);
+      this.route.navigate(['/pages/templates']);
     } catch (e) {
       this.loading.dismiss();
       this.error = "Código de acesso inválido";
