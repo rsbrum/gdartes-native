@@ -5,8 +5,8 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
   providedIn: 'root'
 })
 export class RequestsService {
-
-  BASE = "http://localhost:8000/";
+  //BASE = "http://localhost:8000/";
+  BASE = "https://geradordeartes.com.br/";
 
   constructor(private http: HttpClient) { }
 
