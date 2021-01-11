@@ -14,7 +14,6 @@ export class AuthService {
     let data = {
       'access_code': accessCode
     }
-    this.requestsService.puto();
     let loginResponse = await this.requestsService.post(`api/business/login`, data).toPromise() as any;
 
     this.setSession(loginResponse.agency_subdomain, loginResponse.access_code, loginResponse.business_name, loginResponse.accepted_terms)

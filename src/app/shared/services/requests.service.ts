@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 })
 export class RequestsService {
 
-  BASE = "https://geradordeartes.com.br/";
+  BASE = "http://localhost:8000/";
 
   constructor(private http: HttpClient) { }
 
@@ -25,9 +25,7 @@ export class RequestsService {
     url = this.BASE + url;
     return this.http.get(url, options);
   }
-  puto () {
-    console.log("putasso");
-  }
+
   post(url: string, body: any | null, options?: {
     headers?: HttpHeaders | {
         [header: string]: string | string[];
