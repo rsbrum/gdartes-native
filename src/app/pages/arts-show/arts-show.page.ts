@@ -64,6 +64,7 @@ export class ArtsShowPage implements OnInit {
     this.showShareButtonIfPossible();
     this.adjustArtSize();
     this.loading.dismiss();
+
   }  
   
   adjustArtSize() {

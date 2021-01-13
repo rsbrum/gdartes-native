@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "gdartes-native",
+  "appId": "gdartes.app",
+  "appName": "Gerador de Artes",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

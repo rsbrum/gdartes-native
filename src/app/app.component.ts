@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
       icon: 'images'
     },
     {
-      title: 'Templates',
+      title: 'Modelos',
       url: '/pages/templates',
       icon: 'brush'
     },
