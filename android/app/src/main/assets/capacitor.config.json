@@ -1,6 +1,6 @@
 {
   "appId": "gdartes.app",
-  "appName": "Gerador de Artes",
+  "appName": "gdartes-native",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
