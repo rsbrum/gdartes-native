@@ -1,3 +1,3 @@
 [submodule "src/app/gdartes-renderer"] 
   path = src/app/gdartes-renderer
-  url = git:https://github.com/somaestrategias/gdartes-renderer
+  url = git://github.com/somaestrategias/gdartes-renderer
