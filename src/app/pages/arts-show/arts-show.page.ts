@@ -34,7 +34,7 @@ export class ArtsShowPage implements OnInit {
     public loadingController: LoadingController) { 
 
   }
-
+  //random
   async ngOnInit() {
     this.loading = await this.loadingController.create({
       spinner: "lines",
